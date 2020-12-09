@@ -37,6 +37,8 @@ Then this object will be tranformed - using the above transformation - to the fo
 </li>	
 ```
 
+You can find a playground an documentation on [http://www.json2html.com/](http://www.json2html.com/#getstarted).
+
 ## Use case
 Suppose you leave your home and activate your alarm system, but you have forgotten to close some doors and windows.  Since those doors and windows have reed relays, you might want to get a warning about it.  A popup should automatically be displayed, which displays the sensor issues.  Then you can decide whether:
 + You want to "cancel" the alarm activation (and go back into the house to close the doors and windows).
