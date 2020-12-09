@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "A Node Red node for converting json to html",
     "dependencies": {
-        "node-json2html": "^node-json2html"
+        "node-json2html": "^1.4.0"
     },
     "author": {
         "name": "Bart Butenaers"
