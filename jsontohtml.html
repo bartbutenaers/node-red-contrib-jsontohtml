@@ -1,0 +1,54 @@
+<!--
+  Copyright 2020, Bart Butenaers
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  http://www.apache.org/licenses/LICENSE-2.0
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<script type="text/javascript">
+    RED.nodes.registerType('jsontohtml',{
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            transform: {value:"", required: true},
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "font-awesome/fa-html5",
+        label: function() {
+            return this.name||"Json to Html";
+        },
+        oneditprepare: function() {
+            $("#node-input-transform").typedInput({
+                types: ["json"],
+                default: "json"
+            });
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="jsontohtml">
+    <div class="form-row">
+        <label for="node-input-transform"><i class="fa fa-exchange"></i> Transform</label>
+        <input type="text" id="node-input-transform" placeholder="Transform" style="width:70%">
+    </div>
+    </br>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="jsontohtml">
+    <p>A Node Red node to convert JSON to HTML.</p>
+    <p>This node is based on the json2html javascript HTML templating library.</p>
+    <p><strong>Transform:</strong><br/>
+    Specify how the conversion should be transformed.  See the <a href="http://www.json2html.com/">website</a> for documentation and examples.</p>
+</script>
+
